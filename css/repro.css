@@ -12,7 +12,7 @@
 }
 .caratula{
     width: 90%;
-    height: 70%;
+    height: 60%;
 }
 .repro audio a{
     width: 1rem;
@@ -24,7 +24,7 @@
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    height: 5rem;
+    height: 20%;
     align-items: center;
 }
 .controles div{
@@ -32,9 +32,9 @@
     display: flex;
     justify-content: space-around;
     border: 0.5px ridge;
-    height: 100%;
+    height: 65%;
     align-items: center;
-    border-radius: 37px;
+    border-radius: 16px;
 }
 .controles div a{
     text-decoration: none;
@@ -75,15 +75,32 @@
     font-size: 14px;
     color: #333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .centro{
     width: 100%;
-    height: 10%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
 }
 #volume-control {
     margin-top: 10px;
+    width: 30%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
-
+#volume-control i{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #volume-slider {
-    width: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
 }
