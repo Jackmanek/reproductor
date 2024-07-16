@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.repro{
+    margin: 0 auto;
+    width: 390px;
+    height: 500px;
+    border: 0.5px solid black;
+    border-radius: 12px;
+}
+.caratula{
+    width: 90%;
+    height: 70%;
+}
+.repro audio a{
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid black;
+}
+.controles{
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 5rem;
+    align-items: center;
+}
+.controles div{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    border: 0.5px ridge;
+    height: 100%;
+    align-items: center;
+    border-radius: 37px;
+}
+.controles div a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#progress-container {
+    width: 94%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+
+#progress-bar {
+    height: 90%;
+    background-color: #b6bcc5;
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.1s;
+}
+#time-remaining {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.centro{
+    width: 100%;
+    height: 10%;
+}
