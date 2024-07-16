@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const audioPlayer = document.getElementById("audio-player");
     const progressBar = document.getElementById("progress-bar");
     const timeRemaining = document.getElementById("time-remaining");
+    const volumeSlider = document.getElementById("volume-slider");
 
     function formatTime(seconds) {
         const minutes = Math.floor(seconds / 60);
@@ -38,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const remainingTime = duration - currentTime;
             timeRemaining.textContent = formatTime(remainingTime) + " / "+ formatTime(duration);
         }
+    });
+    volumeSlider.addEventListener("input", function() {
+        audioPlayer.volume = volumeSlider.value;
     });
 });
 
