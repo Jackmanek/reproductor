@@ -3,16 +3,20 @@
     padding: 0%;
     box-sizing: border-box;
 }
+.contenedor{
+    width: 390px;
+    height: 844px;
+}
 .repro{
     margin: 0 auto;
     width: 390px;
-    height: 500px;
+    height: 844px;
     border: 0.5px solid black;
     border-radius: 12px;
-}
-.caratula{
-    width: 90%;
-    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .repro audio a{
     width: 1rem;
@@ -24,7 +28,7 @@
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    height: 20%;
+    height: 15%;
     align-items: center;
 }
 .controles div{
@@ -82,13 +86,52 @@
 }
 .centro{
     width: 100%;
-    height: 20%;
+    height: 25%;
     display: flex;
     flex-wrap: wrap;
 }
+.part1{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+}
+.title{
+    width: 90%;
+    height: 30%;
+    background-color: #3d3f4193;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.part2{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.part2 div{
+    width: 15%;
+    height: 80%;
+    border: 0.5px ridge;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 52%;
+}
+.part3{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 #volume-control {
     margin-top: 10px;
-    width: 30%;
+    width: 60%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -103,4 +146,16 @@
     width: 70%;
     display: flex;
     align-items: center;
+}
+.north{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caratula{
+    width: 90%;
+    height: 90%;
+    background-color: aliceblue;
 }

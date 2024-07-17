@@ -10,44 +10,42 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section>
-        <div>
-            <div class="img_track">
-
-            </div>
+    <section class="contenedor">
             <div class="repro">
-                <div class="caratula">
-                    <audio controls src="media/songs/Vetusta Morla - Finisterre.mp3"  id="audio-player"></audio>
+                <div class="north">
+                    <div class="caratula">
+                    
+                    </div>
                 </div>
                 <div class="centro">
-                    <div id="progress-container">
-                        <div id="progress-bar"></div>
+                    <div class="part1">
+                        <div class="title">Track1</div>
+                        <div id="progress-container">
+                            <div id="progress-bar"></div>
+                        </div>
                     </div>
-                    <div id="time-remaining">--:--</div>
-                    <div id="volume-control">
-                        <i class="fa-solid fa-volume-high"></i>
-                        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                    <div class="part3">
+                        <div id="time-remaining"> -- : -- / -- : -- </div>
+                        <div id="volume-control">
+                            <i class="fa-solid fa-volume-high"></i>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
                     </div>
+                    <div class="part2">
+                        <div><i class="fa-solid fa-repeat"></i><i class="fa-solid fa-repeat-1"></i></div>
+                        <div><i class="fa-solid fa-music"></i></div>
+                        <div><i class="fa-solid fa-shuffle"></i></div>
+                    </div>
+                    
                 </div>            
                 <div class="controles">
+                    <audio  src="media/songs/Vetusta Morla - Finisterre.mp3"  id="audio-player"></audio>
                     <div><a href=""><i class="fa-solid fa-backward-step"></i></a></div>
                     <div><a class="start"><i class="fa-solid fa-play btnStart"></i><i class="fa-solid fa-pause btnPause"></i></a></div>
                     <div><a href=""><i class="fa-solid fa-forward-step"></i></a></div>
                 </div>  
-                
-                
-                
-
             </div>
-        </div>
     </section>
-
-
-
-
-
-
-
     <script src="js/repro.js"></script>
 </body>
 </html>
