@@ -21,11 +21,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const progressBar = document.getElementById("progress-bar");
     const timeRemaining = document.getElementById("time-remaining");
     const volumeSlider = document.getElementById("volume-slider");
+    const playlist = document.getElementById("playlist").getElementsByTagName("li");
+    const toggleLoopButton = document.getElementById("toggle-loop");
+    const prevButton = document.querySelector(".rev");
+    const nextButton = document.querySelector(".few");
+    let currentTrack = 0;
+    let isLooping = false;
 
     function formatTime(seconds) {
         const minutes = Math.floor(seconds / 60);
         const secs = Math.floor(seconds % 60);
         return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+    function loadTrack(index) {
+        audioPlayer.src = playlist[index].getAttribute("data-src");
+       
     }
 
     audioPlayer.addEventListener("timeupdate", function() {
@@ -43,6 +53,47 @@ document.addEventListener("DOMContentLoaded", function() {
     volumeSlider.addEventListener("input", function() {
         audioPlayer.volume = volumeSlider.value;
     });
+
+    audioPlayer.addEventListener("ended", function() {
+        if (isLooping) {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            loadTrack(currentTrack);
+            audioPlayer.play();
+        } else {
+            if (currentTrack < playlist.length - 1) {
+                currentTrack++;
+                loadTrack(currentTrack);
+                audioPlayer.play();
+            }
+        }
+    });
+    toggleLoopButton.addEventListener("click", function() {
+        isLooping = !isLooping;
+        toggleLoopButton.className = isLooping ? "changesOff" : "changesOn";
+    });
+    prevButton.addEventListener("click", function() {
+        if (currentTrack > 0) {
+            currentTrack--;
+        } else {
+            currentTrack = playlist.length - 1; // Ir al final de la lista si estamos al principio
+        }
+        loadTrack(currentTrack);
+        audioPlayer.play(); 
+    });
+
+    nextButton.addEventListener("click", function() {
+        if (currentTrack < playlist.length - 1) {
+            currentTrack++;
+        } else {
+            currentTrack = 0; // Ir al principio de la lista si estamos al final
+        }
+        loadTrack(currentTrack);
+        audioPlayer.play();
+    });
+
+    // Initial load
+    loadTrack(currentTrack);
+
 });
 
 
