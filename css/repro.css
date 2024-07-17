@@ -7,9 +7,7 @@
     width: 390px;
     height: 844px;
 }
-.btnPause{
-    display: none !important;
-}
+
 .repro{
     margin: 0 auto;
     width: 390px;
@@ -20,6 +18,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(
+        0deg,
+        hsl(0deg 0% 0%) 0%,
+        hsl(35deg 44% 25%) 40%,
+        hsl(14deg 18% 27%) 54%,
+        hsl(360deg 4% 14%) 66%,
+        hsl(339deg 0% 0%) 81%,
+        hsl(0deg 0% 0%) 100%
+    );
 }
 .repro audio a{
     width: 1rem;
@@ -66,16 +73,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
+    color: #f0f0f0;
 }
 
-.start{
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 #progress-container {
     width: 94%;
     height: 10px;
@@ -97,7 +98,7 @@
 #time-remaining {
     margin-top: 10px;
     font-size: 14px;
-    color: #333;
+    color: #f0f0f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 30%;
     display: flex;
@@ -146,6 +147,9 @@
     background-color: #dfdfdf;
     color:white;
 }
+.part2 div i{
+    color: #f0f0f0;
+}
 .part3{
     width: 100%;
     height: 33%;
@@ -165,6 +169,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #f0f0f0;
 }
 #volume-slider {
     width: 70%;

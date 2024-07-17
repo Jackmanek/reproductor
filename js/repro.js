@@ -6,11 +6,11 @@ btnS.addEventListener('click', function(){
     if(cont % 2 == 0){
         document.querySelector('.btnStart').style.display ="none";
         document.querySelector('audio').play();
-        document.querySelector('.btnPause').style.display ="block";
+        document.querySelector('.btnPause').style.display ="flex";
     }else{
         document.querySelector('.btnPause').style.display ="none";
         document.querySelector('audio').pause();
-        document.querySelector('.btnStart').style.display ="block";
+        document.querySelector('.btnStart').style.display ="flex";
     }
     cont ++;
 
@@ -46,5 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+let rev = document.querySelector('.rev')
 
+rev.addEventListener('click', atras);
+function atras(){
+    
+}
 
